@@ -1,0 +1,70 @@
+{% extends 'base_auth.html' %}
+{% load static %}
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+        <!-- Font online-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        {% block  content%}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}" type='text/css'>
+        <!--  Animate.css-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+                
+        <!-- Google JQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div>
+           <div class="panel shadow1">
+                <form  method="post">
+                {% csrf_token %}
+                    <div class="panel-switch animated fadeIn">
+                        <button type="button" id="sign_up" class="active-button">Sign Up</button>
+                        <button type="button" id="log_in" class="" disabled>Log in</button>
+                    </div>
+                    <h1 class="animated fadeInUp animate1" id="title-login">Welcome Back !</h1>
+                    <h1 class="animated fadeInUp animate1 hidden" id="title-signup">Welcome !</h1>
+                    <fieldset id="login-fieldset">
+                        <input
+                                type="textbox"
+                                name="username"
+                                placeholder="username"
+                                id="usernameField"
+                                class="login animated fadeInUp animate2"
+                                value="{{fieldsValues.username}}"
+                            />
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            class="login animated fadeInUp animate3"
+                            id="passwordField"
+                        />
+                        <div><small class="showPasswordToggle" style="float: right; margin:5px; py-2; color:white">SHOW</small></div>
+                    </fieldset>
+                    <fieldset id="signup-fieldset" class="hidden">
+                        <input class="login animated fadeInUp animate2 invalid_feedback" id="usernameField_up" name="username" type="textbox" placeholder="Username" value="{{fieldsValues.username}}">
+                        <div class="invalid_feedback invalid-feedback" style="display:none"></div>
+                        <div class="text-sm text-success usernameSuccessOutput"> </div>
+                        <input class="login animated fadeInUp animate3" name="email" id="emailField" type="email" placeholder="email"  value="{{fieldsValues.email}}">
+                        <div class="emailFeedbackarea invalid-feedback" style="display:none"></div>
+                        <input class="login animated fadeInUp animate3" id="passwordField_up" name="password" type="password" placeholder="Choose password"  value="">
+                        <div class="emailFeedbackarea invalid-feedback" style="display:none"></div>
+                        <div><small class="showPasswordToggle" style="float: right; margin:5px; py-2; color:white">SHOW</small></div>
+                    </fieldset>
+                    <input type="submit" id="login-form-submit"  class="login_form button animated fadeInUp animate4 submitBtn" value="Log in">
+                    <input type="submit" id="signup-form-submit" class="login_form button animated fadeInUp animate4 hidden" value="Sign up">
+                    <p><a id="lost-password-link" href="" class="animated fadeIn animate5">I forgot my  login or password (!)</a></p>
+                </form>
+            </div>
+        </div>
+        <script src="{% static 'js/form.js' %}"></script>
+    </body>
+</html>
+{% endblock  %}
+

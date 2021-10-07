@@ -1,6 +1,55 @@
 [
     {
+        "label": "django.contrib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -21,6 +70,46 @@
         "description": "django.contrib",
         "isExtraImport": true,
         "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -41,6 +130,110 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -69,10 +262,43 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "django.urls",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
         "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -104,15 +330,111 @@
         "documentation": {}
     },
     {
-        "label": "urlpatterns",
-        "importPath": "expenses.urls",
-        "description": "expenses.urls",
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "expenses.urls",
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetTokenGenerator",
+        "importPath": "django.contrib.auth.tokens",
+        "description": "django.contrib.auth.tokens",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "text_type",
+        "importPath": "six",
+        "description": "six",
+        "isExtraImport": true,
+        "detail": "six",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
         "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -133,6 +455,266 @@
         "description": "django.views",
         "isExtraImport": true,
         "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "validate_email",
+        "importPath": "validate_email",
+        "description": "validate_email",
+        "isExtraImport": true,
+        "detail": "validate_email",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "force_bytes",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "force_text",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoUnicodeDecodeError",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_encode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_decode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_site",
+        "importPath": "django.contrib.sites.shortcuts",
+        "description": "django.contrib.sites.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.contrib.sites.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "now",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "now",
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "isExtraImport": true,
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "UserPreference",
+        "importPath": "userpreferences.models",
+        "description": "userpreferences.models",
+        "isExtraImport": true,
+        "detail": "userpreferences.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserPreference",
+        "importPath": "userpreferences.models",
+        "description": "userpreferences.models",
+        "isExtraImport": true,
+        "detail": "userpreferences.models",
         "documentation": {}
     },
     {
@@ -161,6 +743,14 @@
         "documentation": {}
     },
     {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
         "label": "django_heroku",
         "kind": 6,
         "isExtraImport": true,
@@ -175,6 +765,14 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Source",
+        "importPath": "userincome.models",
+        "description": "userincome.models",
+        "isExtraImport": true,
+        "detail": "userincome.models",
         "documentation": {}
     },
     {
@@ -200,8 +798,44 @@
         "kind": 5,
         "importPath": "authentication.urls",
         "description": "authentication.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register', RegistrationView.as_view(), name='register')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('register', RegistrationView.as_view(), name='register'),\n    path('login', LoginView.as_view(), name='login'),\n    path('logout', LogoutView.as_view(), name='logout'),\n    path('validate-username', csrf_exempt(UsernameValidationView.as_view()), name='Username-validation'),\n    path('validate-email', csrf_exempt(EmailValidationView.as_view()), name='Username-email'),\n    path('activate/<uidb64>/<token>/', VerificationView.as_view(), name='activate'),\n]",
         "detail": "authentication.urls",
+        "documentation": {}
+    },
+    {
+        "label": "AppTokenGenerator",
+        "kind": 6,
+        "importPath": "authentication.utils",
+        "description": "authentication.utils",
+        "peekOfCode": "class AppTokenGenerator(PasswordResetTokenGenerator):\n    def _make_hash_value(self, user, timestamp):\n        return (text_type(user.is_active)+text_type(user.pk)+text_type(timestamp))\ntoken_generator = AppTokenGenerator()",
+        "detail": "authentication.utils",
+        "documentation": {}
+    },
+    {
+        "label": "token_generator",
+        "kind": 5,
+        "importPath": "authentication.utils",
+        "description": "authentication.utils",
+        "peekOfCode": "token_generator = AppTokenGenerator()",
+        "detail": "authentication.utils",
+        "documentation": {}
+    },
+    {
+        "label": "UsernameValidationView",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class UsernameValidationView(View):\n    def post(self, request):\n        data = json.loads(request.body)\n        username = data['username']\n        if not str(username).isalnum():\n            return JsonResponse({\"username_error\": \"username can only contain alphanumeric characters\"}, status=400)\n        if User.objects.filter(username=username).exists():\n            return JsonResponse({\"username_error\": \"username in use, choose another one\"}, status=400)\n        return JsonResponse({\"username_valid\": True})\nclass EmailValidationView(View):",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "EmailValidationView",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class EmailValidationView(View):\n    def post(self, request):\n        data = json.loads(request.body)\n        email = data['email']\n        if not validate_email(email):\n            print(\"here\")\n            return JsonResponse({\"email_error\": \"email invalid\"}, status=400)\n        if User.objects.filter(email=email).exists():\n            return JsonResponse({\"email_error\": \"email in use, choose another one\"}, status=400)\n        return JsonResponse({\"email_valid\": True})",
+        "detail": "authentication.views",
         "documentation": {}
     },
     {
@@ -209,8 +843,62 @@
         "kind": 6,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "class RegistrationView(View):\n    def get(self, request):\n        return render(request, 'authentication/register.html')",
+        "peekOfCode": "class RegistrationView(View):\n    def get(self, request):\n        return render(request, 'authentication/register.html')\n    def post(self, request):\n        username = request.POST['username']\n        email = request.POST['email']\n        password= request.POST['password']\n        context = {\n            \"fieldsValues\": request.POST\n        }",
         "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "VerificationView",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class VerificationView(View):\n    def get(self, request, uidb64, token):\n        try:\n            id = force_text(urlsafe_base64_decode(uidb64))\n            user = User.objects.get(pk=id)\n            if not token_generator.check_token(user, token):\n                return redirect('login'+'?message='+'User already activated')\n            if user.is_active:\n                return redirect('login')\n            user.is_active = True",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoginView",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class LoginView(View):\n    def get(self, request):\n        return render(request, 'authentication/login.html')\n    def post(self, request):\n        print(\"They call me\")\n        print(request.POST)\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        if username and password:\n            user = auth.authenticate(username=username, password=password)",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutView",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class LogoutView(View):\n    def post(self, request):\n        auth.logout(request)\n        messages.success(request, 'You have been logoed out')\n        return redirect('login')",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "expenses.migrations.0001_initial",
+        "description": "expenses.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Category',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "expenses.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "expenses.migrations.0002_auto_20211005_1134",
+        "description": "expenses.migrations.0002_auto_20211005_1134",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('expenses', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='category',\n            options={'verbose_name_plural': 'Categories'},\n        ),\n        migrations.AlterField(",
+        "detail": "expenses.migrations.0002_auto_20211005_1134",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "expenses.migrations.0003_alter_expense_date",
+        "description": "expenses.migrations.0003_alter_expense_date",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('expenses', '0002_auto_20211005_1134'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='expense',\n            name='date',\n            field=models.DateField(default=django.utils.timezone.now),\n        ),",
+        "detail": "expenses.migrations.0003_alter_expense_date",
         "documentation": {}
     },
     {
@@ -223,11 +911,29 @@
         "documentation": {}
     },
     {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "expenses.models",
+        "description": "expenses.models",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=255)\n    class Meta:\n        verbose_name_plural = 'Categories'\nclass Expense(models.Model):\n    amount = models.FloatField()\n    date = models.DateField(default=now)\n    description = models.TextField()\n    owner = models.ForeignKey(to=User, on_delete=models.CASCADE)\n    category = models.CharField(max_length=255)",
+        "detail": "expenses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Expense",
+        "kind": 6,
+        "importPath": "expenses.models",
+        "description": "expenses.models",
+        "peekOfCode": "class Expense(models.Model):\n    amount = models.FloatField()\n    date = models.DateField(default=now)\n    description = models.TextField()\n    owner = models.ForeignKey(to=User, on_delete=models.CASCADE)\n    category = models.CharField(max_length=255)\n    def __str__(self):\n        return self.category\n    class Meta:\n        ordering = ('-date', )",
+        "detail": "expenses.models",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "expenses.urls",
         "description": "expenses.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses'),\n    path('edit-expense/<int:id>', views.edit_expense, name='edit-expenses'),\n    path('delete-expense/<int:id>', views.delete_expense, name='delete-expenses'),\n    path('search-expenses/', csrf_exempt(views.search_expense), name='search-expenses'),\n]",
         "detail": "expenses.urls",
         "documentation": {}
     },
@@ -236,7 +942,7 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def index(request):\n    return render(request, 'expenses/index.html')\ndef add_expense(request):\n    return render(request, 'expenses/add_expense.html')",
+        "peekOfCode": "def index(request):\n    #categories = Category.objects.all()\n    expenses = Expense.objects.filter(owner=request.user)\n    paginator = Paginator(expenses, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    currency = UserPreference.objects.all()[0]\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n    except UserPreference.DoesNotExist:",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -245,7 +951,34 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def add_expense(request):\n    return render(request, 'expenses/add_expense.html')",
+        "peekOfCode": "def add_expense(request):\n    category = Category.objects.all()\n    context = {\n        'categories': category,\n        'values': request.POST\n    }\n    if request.method == 'GET':\n        return render(request, 'expenses/add_expense.html', context)\n    if request.method == 'POST':\n        amount = request.POST.get('amount')",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "edit_expense",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def edit_expense(request, id):\n    categories = Category.objects.all()\n    expense = Expense.objects.get(pk=id)\n    context = {'expense': expense, \"values\": expense, \"categories\": categories}\n    if request.method == 'GET':\n        return render(request, 'expenses/edit_expense.html', context)\n    if request.method == 'POST':\n        expense = Expense.objects.get(pk=id)\n        context = {'expense': expense, \"values\": expense, \"categories\": categories}\n        amount = request.POST.get('amount')",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_expense",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def delete_expense(request, id):\n    expense = Expense.objects.get(pk=id)\n    expense.delete()\n    messages.success(request, 'expense deleted successfully')\n    return redirect('expenses')\ndef search_expense(request):\n    if request.method == 'POST':\n        search_str = json.loads(request.body).get('searchText')\n        print(search_str)\n        expenses = Expense.objects.filter(",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "search_expense",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def search_expense(request):\n    if request.method == 'POST':\n        search_str = json.loads(request.body).get('searchText')\n        print(search_str)\n        expenses = Expense.objects.filter(\n            amount__istartswith=search_str, owner=request.user) | \\\n            Expense.objects.filter(date__istartswith=search_str) | \\\n            Expense.objects.filter(description__icontains=search_str, owner=request.user) | \\\n            Expense.objects.filter(category__icontains=search_str, owner=request.user)\n        data = expenses.values()",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -299,7 +1032,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'expenses',\n    'authentication',\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'expenses',\n    'authentication',\n    'userpreferences',",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -331,11 +1064,20 @@
         "documentation": {}
     },
     {
+        "label": "MESSAGE_STORAGE",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'\nWSGI_APPLICATION = 'expenseswebsite.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('DB_NAME'),\n        'USER': config('DB_USER'),\n        'PASSWORD': config('DB_USER_PASSWORD'),",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
         "label": "WSGI_APPLICATION",
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'expenseswebsite.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.environ.get('DB_NAME'),\n        'USER': os.environ.get('DB_USER'),\n        'PASSWORD': os.environ.get('DB_USER_PASSWORD'),\n        'HOST': os.environ.get('DB_HOST')",
+        "peekOfCode": "WSGI_APPLICATION = 'expenseswebsite.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('DB_NAME'),\n        'USER': config('DB_USER'),\n        'PASSWORD': config('DB_USER_PASSWORD'),\n        'HOST': config('DB_HOST')",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -344,7 +1086,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.environ.get('DB_NAME'),\n        'USER': os.environ.get('DB_USER'),\n        'PASSWORD': os.environ.get('DB_USER_PASSWORD'),\n        'HOST': os.environ.get('DB_HOST')\n    }\n}\n# Password validation",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('DB_NAME'),\n        'USER': config('DB_USER'),\n        'PASSWORD': config('DB_USER_PASSWORD'),\n        'HOST': config('DB_HOST')\n    }\n}\n# Password validation",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -362,7 +1104,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nAPPEND_SLASH=False\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -371,7 +1113,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nAPPEND_SLASH=False\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -380,7 +1122,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nAPPEND_SLASH=False\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -389,7 +1131,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\nAPPEND_SLASH=False\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -398,7 +1140,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())",
+        "peekOfCode": "USE_TZ = True\nAPPEND_SLASH=False\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -407,7 +1149,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())\nMESSAGE_TAGS = {\n    messages.ERROR: \"danger\"\n}",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -416,7 +1158,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())",
+        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'expenseswebsite/static')]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())\nMESSAGE_TAGS = {\n    messages.ERROR: \"danger\"\n}\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -425,7 +1167,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())\nMESSAGE_TAGS = {\n    messages.ERROR: \"danger\"\n}\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -434,7 +1176,70 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\ndjango_heroku.settings(locals())\nMESSAGE_TAGS = {\n    messages.ERROR: \"danger\"\n}\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MESSAGE_TAGS",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "MESSAGE_TAGS = {\n    messages.ERROR: \"danger\"\n}\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "EMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "EMAIL_PORT = 587",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -443,7 +1248,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.urls",
         "description": "expenseswebsite.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('expenses.urls')),\n    path('authentication/', include('authentication.urls'))\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('expenses.urls')),\n    path('authentication/', include('authentication.urls')),\n    path('references/', include('userpreferences.urls')),\n    path('income/', include('userincome.urls')),\n]",
         "detail": "expenseswebsite.urls",
         "documentation": {}
     },
@@ -454,6 +1259,150 @@
         "description": "expenseswebsite.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "expenseswebsite.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "userincome.migrations.0001_initial",
+        "description": "userincome.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Source',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "userincome.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "UserincomeConfig",
+        "kind": 6,
+        "importPath": "userincome.apps",
+        "description": "userincome.apps",
+        "peekOfCode": "class UserincomeConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'userincome'",
+        "detail": "userincome.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Source",
+        "kind": 6,
+        "importPath": "userincome.models",
+        "description": "userincome.models",
+        "peekOfCode": "class Source(models.Model):\n    name = models.CharField(max_length=255)\nclass UserIncome(models.Model):\n    amount = models.FloatField()\n    date = models.DateField(default=now)\n    description = models.TextField()\n    owner = models.ForeignKey(to=User, on_delete=models.CASCADE)\n    source = models.CharField(max_length=255)\n    def __str__(self):\n        return self.source",
+        "detail": "userincome.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserIncome",
+        "kind": 6,
+        "importPath": "userincome.models",
+        "description": "userincome.models",
+        "peekOfCode": "class UserIncome(models.Model):\n    amount = models.FloatField()\n    date = models.DateField(default=now)\n    description = models.TextField()\n    owner = models.ForeignKey(to=User, on_delete=models.CASCADE)\n    source = models.CharField(max_length=255)\n    def __str__(self):\n        return self.source\n    class Meta:\n        ordering = ('-date', )",
+        "detail": "userincome.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "userincome.urls",
+        "description": "userincome.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='incomes'),\n    path('add-income/', views.add_income, name='add-income'),\n    path('edit-income/<int:id>', views.edit_income, name='edit-income'),\n    path('delete-income/<int:id>', views.delete_income, name='delete-income'),\n    path('search-income/', csrf_exempt(views.search_income), name='search-income'),\n]",
+        "detail": "userincome.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def index(request):\n    incomes = UserIncome.objects.filter(owner=request.user)\n    paginator = Paginator(incomes, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    print(page_obj)\n    currency = UserPreference.objects.get(user=request.user)\n    context = {\n        'incomes': incomes,\n        \"page_obj\": page_obj,",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_income",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def add_income(request):\n    sources = Source.objects.all()\n    context = {\n        'sources': sources,\n        'values': request.POST\n    }\n    if request.method == 'GET':\n        return render(request, 'userincome/add_income.html', context)\n    if request.method == 'POST':\n        amount = request.POST.get('amount')",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "edit_income",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def edit_income(request, id):   \n    sources = Source.objects.all()\n    income = UserIncome.objects.get(id=id)\n    context = {'income': income, \"values\": income, \"sources\": sources}\n    if request.method == 'GET':\n        return render(request, 'userincome/edit_income.html', context)\n    if request.method == 'POST':\n        income = UserIncome.objects.get(pk=id)\n        amount = request.POST.get('amount')\n        source = request.POST.get('source')",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_income",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def delete_income(request, id):\n    income = UserIncome.objects.get(pk=id)\n    income.delete()\n    messages.success(request, 'income deleted successfully')\n    return redirect('incomes')\ndef search_income(request):\n    if request.method == 'POST':\n        search_str = json.loads(request.body).get('searchText')\n        print(search_str)\n        incomes = UserIncome.objects.filter(",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "search_income",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def search_income(request):\n    if request.method == 'POST':\n        search_str = json.loads(request.body).get('searchText')\n        print(search_str)\n        incomes = UserIncome.objects.filter(\n            amount__istartswith=search_str, owner=request.user) | \\\n            UserIncome.objects.filter(date__istartswith=search_str) | \\\n            UserIncome.objects.filter(description__icontains=search_str, owner=request.user) | \\\n            UserIncome.objects.filter(source__icontains=search_str, owner=request.user)\n        data = incomes.values()",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "userpreferences.migrations.0001_initial",
+        "description": "userpreferences.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UserPreferences',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "userpreferences.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "userpreferences.migrations.0002_rename_userpreferences_userpreference",
+        "description": "userpreferences.migrations.0002_rename_userpreferences_userpreference",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('userpreferences', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameModel(\n            old_name='UserPreferences',\n            new_name='UserPreference',\n        ),",
+        "detail": "userpreferences.migrations.0002_rename_userpreferences_userpreference",
+        "documentation": {}
+    },
+    {
+        "label": "UserpreferencesConfig",
+        "kind": 6,
+        "importPath": "userpreferences.apps",
+        "description": "userpreferences.apps",
+        "peekOfCode": "class UserpreferencesConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'userpreferences'",
+        "detail": "userpreferences.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserPreference",
+        "kind": 6,
+        "importPath": "userpreferences.models",
+        "description": "userpreferences.models",
+        "peekOfCode": "class UserPreference(models.Model):\n    user = models.OneToOneField(to=User, on_delete=models.CASCADE)\n    currency = models.CharField(max_length=255, blank=True, null=True)\n    def __str__(self):\n        return str(self.user)+ 's'+'preference'",
+        "detail": "userpreferences.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "userpreferences.urls",
+        "description": "userpreferences.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='preferences'),\n]",
+        "detail": "userpreferences.urls",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "userpreferences.views",
+        "description": "userpreferences.views",
+        "peekOfCode": "def index(request):\n    is_user_exist = UserPreference.objects.filter(user=request.user).exists()\n    print(is_user_exist)\n    user_preferences = None\n    if is_user_exist:\n        user_preferences = UserPreference.objects.get(user=request.user)\n        messages.success(request, \"Please choose your currency\")\n    currencies = []\n    if request.method == 'GET':\n        file_path = os.path.join(settings.BASE_DIR , 'currencies.json')",
+        "detail": "userpreferences.views",
         "documentation": {}
     },
     {
