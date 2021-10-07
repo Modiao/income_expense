@@ -35,7 +35,11 @@
         <table class="table table-stripped table-hover">
         <thead>
             <tr>
-                <th>Amount - ({{currency}})</th>
+                {% if currency == "setup the currency" %}
+                    <th><a href="{% url 'preferences' %}">Amount  - ({{currency}})</a></th>
+                {% else %}
+                    <th>Amount - ({{currency}})</th>
+                {% endif %}
                 <th>Category</th>
                 <th>Description</th>
                 <th>Date</th>
@@ -62,7 +66,11 @@
             <table class="table table-stripped table-hover">
             <thead>
                 <tr>
-                    <th>Amount  -  ({{currency}})</th>
+                    {% if currency == "setup the currency" %}
+                        <th><a href="{% url 'preferences' %}">Amount  - ({{currency}})</a></th>
+                    {% else %}
+                        <th>Amount - ({{currency}})</th>
+                    {% endif %}
                     <th>Category</th>
                     <th>Description</th>
                     <th>Date</th>

@@ -241,6 +241,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -942,7 +974,7 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def index(request):\n    #categories = Category.objects.all()\n    expenses = Expense.objects.filter(owner=request.user)\n    paginator = Paginator(expenses, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    currency = UserPreference.objects.all()[0]\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n    except UserPreference.DoesNotExist:",
+        "peekOfCode": "def index(request):\n    expenses = Expense.objects.filter(owner=request.user)\n    paginator = Paginator(expenses, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n        currency = currency.currency\n    except UserPreference.DoesNotExist:\n        currency = \"setup the currency\"",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -1311,7 +1343,7 @@
         "kind": 2,
         "importPath": "userincome.views",
         "description": "userincome.views",
-        "peekOfCode": "def index(request):\n    incomes = UserIncome.objects.filter(owner=request.user)\n    paginator = Paginator(incomes, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    print(page_obj)\n    currency = UserPreference.objects.get(user=request.user)\n    context = {\n        'incomes': incomes,\n        \"page_obj\": page_obj,",
+        "peekOfCode": "def index(request):\n    incomes = UserIncome.objects.filter(owner=request.user)\n    paginator = Paginator(incomes, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n        currency = currency.currency\n    except UserPreference.DoesNotExist:\n        currency = \"setup the currency\"",
         "detail": "userincome.views",
         "documentation": {}
     },
@@ -1367,6 +1399,24 @@
         "description": "userpreferences.migrations.0002_rename_userpreferences_userpreference",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('userpreferences', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameModel(\n            old_name='UserPreferences',\n            new_name='UserPreference',\n        ),",
         "detail": "userpreferences.migrations.0002_rename_userpreferences_userpreference",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "userpreferences.migrations.0003_alter_userpreference_currency",
+        "description": "userpreferences.migrations.0003_alter_userpreference_currency",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('userpreferences', '0002_rename_userpreferences_userpreference'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='userpreference',\n            name='currency',\n            field=models.CharField(blank=True, default='BMD - Bermudan Dollar', max_length=255, null=True),\n        ),",
+        "detail": "userpreferences.migrations.0003_alter_userpreference_currency",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "userpreferences.migrations.0004_alter_userpreference_currency",
+        "description": "userpreferences.migrations.0004_alter_userpreference_currency",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('userpreferences', '0003_alter_userpreference_currency'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='userpreference',\n            name='currency',\n            field=models.CharField(blank=True, max_length=255, null=True),\n        ),",
+        "detail": "userpreferences.migrations.0004_alter_userpreference_currency",
         "documentation": {}
     },
     {

@@ -13,20 +13,19 @@ from .models import Category, Expense
 
 @login_required(login_url='/authentication/login')
 def index(request):
-    #categories = Category.objects.all()
     expenses = Expense.objects.filter(owner=request.user)
     paginator = Paginator(expenses, 4)
     page_number = request.GET.get('page')
     page_obj = Paginator.get_page(paginator, page_number)
-    currency = UserPreference.objects.all()[0]
     try:
         currency = UserPreference.objects.get(user=request.user)
+        currency = currency.currency
     except UserPreference.DoesNotExist:
-        currency = currency
+        currency = "setup the currency"
     context = {
         'expenses': expenses,
         "page_obj": page_obj,
-        "currency": currency.currency,
+        "currency": currency,
     }
     return render(request, 'expenses/index.html', context)
 

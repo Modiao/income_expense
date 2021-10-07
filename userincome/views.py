@@ -17,12 +17,15 @@ def index(request):
     paginator = Paginator(incomes, 4)
     page_number = request.GET.get('page')
     page_obj = Paginator.get_page(paginator, page_number)
-    print(page_obj)
-    currency = UserPreference.objects.get(user=request.user)
+    try:
+        currency = UserPreference.objects.get(user=request.user)
+        currency = currency.currency
+    except UserPreference.DoesNotExist:
+        currency = "setup the currency"
     context = {
         'incomes': incomes,
         "page_obj": page_obj,
-        "currency": currency.currency,
+        "currency": currency,
     }
     return render(request, 'userincome/index.html', context)
 
