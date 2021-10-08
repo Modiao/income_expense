@@ -1,7 +1,7 @@
     {% extends 'base_auth.html' %}
 {% load static %}
 {% block content %}
-    <div class="row">
+    <div class="row" align="center">
     <div class="col-md-4"></div>
     <div class="col-md-4"> 
     <div class='card mt-5'>
@@ -10,7 +10,7 @@
            <h4>Login to your account</h4>
         </div>
 
-            <form action="{% url 'login' %}" method="post">
+        <form action="{% url 'login' %}" method="post">
             {% csrf_token %}
             {% include 'partials/_messages.html' %}
 
@@ -36,9 +36,11 @@
                 </div>
                 </div>
                 <input type="submit" value="Login" class="btn btn-block btn-primary submitBtn"/>
-                <div> <a href="{% url 'register' %}">Sign Up</a></div>
-
-            </form>
+        </form>
+        <div class="container">
+            <span class="test-lead lead">Don't have an account? </span><a href="{% url 'register' %}"> Register</a><br/>
+            <span class="test-lead lead">Forget Password?</span><a href="{% url 'request-password' %}"> Reset it</a>
+        </div>
         </div>
     </div> 
     </div>

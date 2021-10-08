@@ -1,19 +1,30 @@
-from django.shortcuts import redirect, render
-from django.views import View
-from django.http import JsonResponse
-from django.contrib.auth.models import User
-from django.contrib import messages
 import json
-from validate_email import validate_email
-from django.core.mail import EmailMessage
-from django.utils.encoding import force_bytes, force_text,DjangoUnicodeDecodeError
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.contrib.sites.shortcuts import get_current_site
-from django.urls import reverse
-from django.contrib import auth
+from lib2to3.fixes.fix_input import context
 
+from django.contrib import auth, messages
+from django.contrib.auth.models import User
+from django.contrib.auth.tokens import PasswordResetTokenGenerator
+from django.contrib.sites.shortcuts import get_current_site
+from django.core.mail import EmailMessage
+from django.http import JsonResponse
+from django.shortcuts import redirect, render
+from django.urls import reverse
+from django.utils.encoding import (DjangoUnicodeDecodeError, force_bytes,
+                                   force_text)
+from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
+from django.views import View
+from validate_email import validate_email
 
 from .utils import token_generator
+import threading
+
+class EmailThread(threading.Thread):
+    def __init__(self, email):
+        self.email = email
+        threading.Thread.__init__(self)
+    
+    def run(self):
+        self.email.send(fail_silently=False)
 
 
 # Create your views here.
@@ -74,7 +85,7 @@ class RegistrationView(View):
                     'noreply@semycolon.com',
                     [email]
                 )
-                email.send(fail_silently=False)
+                EmailThread(email).start()
                 messages.success(request, "user successfully created")
                 return render(request, 'authentication/register.html')
         messages.error(request, "the field must not null")
@@ -129,3 +140,81 @@ class LogoutView(View):
         auth.logout(request)
         messages.success(request, 'You have been logoed out')
         return redirect('login')
+
+class RequestPasswordResetEmail(View):
+    def get(self, request):
+        return render(request, 'authentication/reset-password.html')
+    
+    def post(self, request):
+        email = request.POST.get('email')
+        if not validate_email(email):
+            messages.error(request, 'Please supply a valid email')
+            return render(request, 'authentication/reset-password.html')
+
+        user = User.objects.filter(email=email)
+        if user.exists():
+            email_contents = {
+                "user": user[0],
+                "domain": get_current_site(request).domain,
+                "uid": urlsafe_base64_encode(force_bytes(user[0].pk)),
+                "token": PasswordResetTokenGenerator().make_token(user[0])
+            }
+
+            link = reverse('reset-user-password', kwargs={"uidb64": email_contents['uid'], "token": email_contents['token']})
+            reset_password_url = "http://"+email_contents['domain']+link
+            email_subject = "Reset Password Instructions"
+            email_body = "Hi "+ user[0].username + ", please click the link below to reset your password     :\n" + reset_password_url
+            email = EmailMessage(
+                email_subject,
+                email_body,
+                'noreply@semycolon.com',
+                [email]
+            )
+            EmailThread(email).start()
+        messages.success(request, 'We have sent you an email to reset your password')
+        return render(request, 'authentication/reset-password.html')
+    
+
+class CompletePasswordReset(View):
+    def get(self, request, uidb64, token):
+        context = {
+            "uidb64": uidb64,
+            "token": token
+        }
+
+        try:
+            user_id = force_text(urlsafe_base64_decode(uidb64))
+            user = User.objects.get(pk=user_id)
+            if not PasswordResetTokenGenerator().check_token(user, token):
+                messages.info(request, 'Password link is invalid, please request a new one')
+                return redirect('request-password')
+        except Exception as e:
+                pass
+        return render(request, 'authentication/set-new-password.html', context)
+
+    def post(selef, request, uidb64, token):
+        context = {
+            "uidb64": uidb64,
+            "token": token
+        }
+        password = request.POST.get('password')
+        password2 = request.POST.get('password2')
+
+        if password != password2:
+            messages.error(request,'password do not match')
+            return render(request, 'authentication/set-new-password.html', context)
+        if len(password) < 6:
+            messages.error(request,'password too short')
+            return render(request, 'authentication/set-new-password.html', context)
+        
+        try:
+            user_id = force_text(urlsafe_base64_decode(uidb64))
+            user = User.objects.get(pk=user_id)
+            user.password = password
+            user.set_password(password)
+            user.save()
+            messages.success(request, 'password reset successfully, you can login with your new password')
+            return redirect('login')
+        except Exception as e:
+            messages.error(request,'Something went wrong, please try again')
+            return render(request, 'authentication/set-new-password.html')

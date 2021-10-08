@@ -17,7 +17,7 @@
         "documentation": {}
     },
     {
-        "label": "messages",
+        "label": "auth",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -25,7 +25,7 @@
         "documentation": {}
     },
     {
-        "label": "auth",
+        "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -410,139 +410,19 @@
         "documentation": {}
     },
     {
+        "label": "PasswordResetTokenGenerator",
+        "importPath": "django.contrib.auth.tokens",
+        "description": "django.contrib.auth.tokens",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
         "label": "text_type",
         "importPath": "six",
         "description": "six",
         "isExtraImport": true,
         "detail": "six",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "View",
-        "importPath": "django.views",
-        "description": "django.views",
-        "isExtraImport": true,
-        "detail": "django.views",
-        "documentation": {}
-    },
-    {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -555,11 +435,51 @@
         "documentation": {}
     },
     {
-        "label": "validate_email",
-        "importPath": "validate_email",
-        "description": "validate_email",
+        "label": "context",
+        "importPath": "lib2to3.fixes.fix_input",
+        "description": "lib2to3.fixes.fix_input",
         "isExtraImport": true,
-        "detail": "validate_email",
+        "detail": "lib2to3.fixes.fix_input",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_site",
+        "importPath": "django.contrib.sites.shortcuts",
+        "description": "django.contrib.sites.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.contrib.sites.shortcuts",
         "documentation": {}
     },
     {
@@ -568,6 +488,102 @@
         "description": "django.core.mail",
         "isExtraImport": true,
         "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoUnicodeDecodeError",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
         "documentation": {}
     },
     {
@@ -587,11 +603,11 @@
         "documentation": {}
     },
     {
-        "label": "DjangoUnicodeDecodeError",
-        "importPath": "django.utils.encoding",
-        "description": "django.utils.encoding",
+        "label": "urlsafe_base64_decode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
         "isExtraImport": true,
-        "detail": "django.utils.encoding",
+        "detail": "django.utils.http",
         "documentation": {}
     },
     {
@@ -603,19 +619,28 @@
         "documentation": {}
     },
     {
-        "label": "urlsafe_base64_decode",
-        "importPath": "django.utils.http",
-        "description": "django.utils.http",
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
         "isExtraImport": true,
-        "detail": "django.utils.http",
+        "detail": "django.views",
         "documentation": {}
     },
     {
-        "label": "get_current_site",
-        "importPath": "django.contrib.sites.shortcuts",
-        "description": "django.contrib.sites.shortcuts",
+        "label": "validate_email",
+        "importPath": "validate_email",
+        "description": "validate_email",
         "isExtraImport": true,
-        "detail": "django.contrib.sites.shortcuts",
+        "detail": "validate_email",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
         "documentation": {}
     },
     {
@@ -830,7 +855,7 @@
         "kind": 5,
         "importPath": "authentication.urls",
         "description": "authentication.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register', RegistrationView.as_view(), name='register'),\n    path('login', LoginView.as_view(), name='login'),\n    path('logout', LogoutView.as_view(), name='logout'),\n    path('validate-username', csrf_exempt(UsernameValidationView.as_view()), name='Username-validation'),\n    path('validate-email', csrf_exempt(EmailValidationView.as_view()), name='Username-email'),\n    path('activate/<uidb64>/<token>/', VerificationView.as_view(), name='activate'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('register', RegistrationView.as_view(), name='register'),\n    path('login', LoginView.as_view(), name='login'),\n    path('logout', LogoutView.as_view(), name='logout'),\n    path('validate-username', csrf_exempt(UsernameValidationView.as_view()), name='Username-validation'),\n    path('validate-email', csrf_exempt(EmailValidationView.as_view()), name='Username-email'),\n    path('activate/<uidb64>/<token>/', VerificationView.as_view(), name='activate'),\n    path('reset-user-password/<uidb64>/<token>/', CompletePasswordReset.as_view(), name='reset-user-password'),\n    path('request-reset-link', RequestPasswordResetEmail.as_view(), name='request-password'),\n]",
         "detail": "authentication.urls",
         "documentation": {}
     },
@@ -850,6 +875,15 @@
         "description": "authentication.utils",
         "peekOfCode": "token_generator = AppTokenGenerator()",
         "detail": "authentication.utils",
+        "documentation": {}
+    },
+    {
+        "label": "EmailThread",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class EmailThread(threading.Thread):\n    def __init__(self, email):\n        self.email = email\n        threading.Thread.__init__(self)\n    def run(self):\n        self.email.send(fail_silently=False)\n# Create your views here.\nclass UsernameValidationView(View):\n    def post(self, request):\n        data = json.loads(request.body)",
+        "detail": "authentication.views",
         "documentation": {}
     },
     {
@@ -902,7 +936,25 @@
         "kind": 6,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "class LogoutView(View):\n    def post(self, request):\n        auth.logout(request)\n        messages.success(request, 'You have been logoed out')\n        return redirect('login')",
+        "peekOfCode": "class LogoutView(View):\n    def post(self, request):\n        auth.logout(request)\n        messages.success(request, 'You have been logoed out')\n        return redirect('login')\nclass RequestPasswordResetEmail(View):\n    def get(self, request):\n        return render(request, 'authentication/reset-password.html')\n    def post(self, request):\n        email = request.POST.get('email')",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "RequestPasswordResetEmail",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class RequestPasswordResetEmail(View):\n    def get(self, request):\n        return render(request, 'authentication/reset-password.html')\n    def post(self, request):\n        email = request.POST.get('email')\n        if not validate_email(email):\n            messages.error(request, 'Please supply a valid email')\n            return render(request, 'authentication/reset-password.html')\n        user = User.objects.filter(email=email)\n        if user.exists():",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "CompletePasswordReset",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class CompletePasswordReset(View):\n    def get(self, request, uidb64, token):\n        context = {\n            \"uidb64\": uidb64,\n            \"token\": token\n        }\n        try:\n            user_id = force_text(urlsafe_base64_decode(uidb64))\n            user = User.objects.get(pk=user_id)\n            if not PasswordResetTokenGenerator().check_token(user, token):",
         "detail": "authentication.views",
         "documentation": {}
     },
@@ -931,6 +983,15 @@
         "description": "expenses.migrations.0003_alter_expense_date",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('expenses', '0002_auto_20211005_1134'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='expense',\n            name='date',\n            field=models.DateField(default=django.utils.timezone.now),\n        ),",
         "detail": "expenses.migrations.0003_alter_expense_date",
+        "documentation": {}
+    },
+    {
+        "label": "ExpensesAdmin",
+        "kind": 6,
+        "importPath": "expenses.admin",
+        "description": "expenses.admin",
+        "peekOfCode": "class ExpensesAdmin(admin.ModelAdmin):\n    list_display = (\n            'amount',\n            'date',\n            'description',\n            'owner',\n            'category'\n    )\n    search_fields = (\n            'amount',",
+        "detail": "expenses.admin",
         "documentation": {}
     },
     {
