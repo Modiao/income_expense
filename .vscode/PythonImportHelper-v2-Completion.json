@@ -1026,7 +1026,7 @@
         "kind": 5,
         "importPath": "expenses.urls",
         "description": "expenses.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses'),\n    path('edit-expense/<int:id>', views.edit_expense, name='edit-expenses'),\n    path('delete-expense/<int:id>', views.delete_expense, name='delete-expenses'),\n    path('search-expenses/', csrf_exempt(views.search_expense), name='search-expenses'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses'),\n    path('edit-expense/<int:id>', views.edit_expense, name='edit-expenses'),\n    path('delete-expense/<int:id>', views.delete_expense, name='delete-expenses'),\n    path('search-expenses/', csrf_exempt(views.search_expense), name='search-expenses'),\n    path('expense_category_summary', views.expense_category_summary, name='expense_category_summary'),\n    path('stats', views.stats_view, name='stats'),\n]",
         "detail": "expenses.urls",
         "documentation": {}
     },
@@ -1072,6 +1072,24 @@
         "importPath": "expenses.views",
         "description": "expenses.views",
         "peekOfCode": "def search_expense(request):\n    if request.method == 'POST':\n        search_str = json.loads(request.body).get('searchText')\n        print(search_str)\n        expenses = Expense.objects.filter(\n            amount__istartswith=search_str, owner=request.user) | \\\n            Expense.objects.filter(date__istartswith=search_str) | \\\n            Expense.objects.filter(description__icontains=search_str, owner=request.user) | \\\n            Expense.objects.filter(category__icontains=search_str, owner=request.user)\n        data = expenses.values()",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "expense_category_summary",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def expense_category_summary(request):\n    todays_date = datetime.date.today()\n    six_months_ago = todays_date - datetime.timedelta(days=30*6)\n    expenses = Expense.objects.filter(owner=request.user,\n        date__gte=six_months_ago, date__lte=todays_date)\n    final_result = {}\n    def get_category(expense):\n        return expense.category\n    category_list = list(set(map(get_category, expenses)))\n    def get_expense_category_amount(category):",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "stats_view",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def stats_view(request):\n    if request.method == \"GET\":\n        return render(request, 'expenses/stats.html')",
         "detail": "expenses.views",
         "documentation": {}
     },

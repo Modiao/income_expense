@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.core.paginator import Paginator
 import json
 from django.http import JsonResponse
+import datetime
 
 from userpreferences.models import UserPreference
 
@@ -110,3 +111,32 @@ def search_expense(request):
             Expense.objects.filter(category__icontains=search_str, owner=request.user)
         data = expenses.values()
         return JsonResponse(list(data), safe=False)
+
+def expense_category_summary(request):
+    todays_date = datetime.date.today()
+    six_months_ago = todays_date - datetime.timedelta(days=30*6)
+    expenses = Expense.objects.filter(owner=request.user,
+        date__gte=six_months_ago, date__lte=todays_date)
+    final_result = {}
+
+    def get_category(expense):
+        return expense.category
+
+    category_list = list(set(map(get_category, expenses)))
+
+    def get_expense_category_amount(category):
+        amount = 0
+        filtered_by_category = expenses.filter(category=category)
+        for item in filtered_by_category:
+            amount += item.amount
+        return amount
+
+    for x in expenses:
+        for y in category_list:
+            final_result[y] = get_expense_category_amount(y)
+    
+    return JsonResponse({"expense_category_data" : final_result}, safe=False)
+
+def stats_view(request):
+    if request.method == "GET":
+        return render(request, 'expenses/stats.html')
