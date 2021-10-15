@@ -86,7 +86,7 @@ class RegistrationView(View):
                     [email]
                 )
                 EmailThread(email).start()
-                messages.success(request, "user successfully created")
+                messages.success(request, "user successfully created, please check your email address to activate your account")
                 return render(request, 'authentication/register.html')
         messages.error(request, "the field must not null")
         return render(request, 'authentication/register.html')
