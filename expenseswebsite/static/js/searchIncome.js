@@ -23,10 +23,12 @@ searchField.addEventListener('keyup', (e) => {
                 tableOutput.style.display = 'block';
                 appTable.style.display = 'none';
                 if (data.length == 0) {
+                    console.log("No data")
                     noResults.style.display = "block";
                     tableOutput.style.display = 'none';
                 } else {
                     data.forEach((items) => {
+                        console.log("have data")
                         noResults.style.display = "none";
                         tableBody.innerHTML += `
                         <tr>

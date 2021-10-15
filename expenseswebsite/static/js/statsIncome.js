@@ -1,7 +1,7 @@
 const renderChart = (labels, data) => {
-    var ctx = document.getElementById('myChart').getContext('2d');
+    var ctx = document.getElementById('myChartIncome').getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'doughnut',
+        type: 'pie',
         data: {
             labels: labels,
             datasets: [{
@@ -29,23 +29,21 @@ const renderChart = (labels, data) => {
         options: {
             title: {
                 display: true,
-                text: 'Expenses per category'
+                text: 'Incomes per categories'
             }
         }
     });
 }
 
 const getChartData = () => {
-
-    fetch("/expense_category_summary")
+    fetch("income_source_summary/")
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
-            const results = data["expense_category_data"];
+            console.log("data", data);
+            const results = data["income_source_data"];
             const [labels, datas] = [Object.keys(results), Object.values(results)];
             renderChart(labels, datas);
         })
 };
-
 
 document.onload = getChartData();

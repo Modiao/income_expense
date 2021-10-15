@@ -4,9 +4,11 @@ from django.contrib import messages
 from django.core.paginator import Paginator
 import json
 from django.http import JsonResponse
+import datetime
 
 from userpreferences.models import UserPreference
 
+from expenses.views import stats_expense_view
 from .models import Source, UserIncome
 
 # Create your views here.
@@ -109,3 +111,36 @@ def search_income(request):
             UserIncome.objects.filter(source__icontains=search_str, owner=request.user)
         data = incomes.values()
         return JsonResponse(list(data), safe=False)
+
+def income_source_summary(request):
+    print("they call me")
+    todays_date = datetime.date.today()
+    six_months_ago = todays_date - datetime.timedelta(days=30*6)
+    incomes = UserIncome.objects.filter(owner=request.user,
+                    date__gte=six_months_ago, date__lte=todays_date)
+    
+    def get_source(incomes):
+        return incomes.source
+    
+    source_list = list(set(map(get_source, incomes)))
+
+    def get_income_source_amount(source):
+        amount = 0
+        sources = incomes.filter(source=source)
+        for items in sources:
+            amount += items.amount
+        return amount
+
+    finalrep = {}
+
+    for x in incomes:
+        for s in source_list:
+            finalrep[s] =  get_income_source_amount(s)
+    
+    return JsonResponse({"income_source_data": finalrep}, safe=False)
+
+
+def stats_income_view(request):
+    if request.method == 'GET':
+        return render(request, 'userincome/stats.html')
+    

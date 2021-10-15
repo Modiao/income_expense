@@ -8,7 +8,7 @@
         <div class="col-md-10" >
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'expenses' %}">Expenses Summary</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'expenses' %}">Incomes Summary</a></li>
                 <li class="breadcrumb-item active" aria-current="page">summary</li>
             </ol>
             </nav>
@@ -17,10 +17,10 @@
             <a href="" class="btn btn-primary">Summary</a>
         </div>
         </div>
-    <canvas id="myChartExpense" width="400" height="300"></canvas>
+    <canvas id="myChartIncome" width="400" height="300"></canvas>
     </div>
 </div>
 
-<script src="{% static 'js/statsExpense.js' %}"></script>
+<script src="{% static 'js/statsIncome.js' %}"></script>
 {% endblock %}
 

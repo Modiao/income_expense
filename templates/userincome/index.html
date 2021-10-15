@@ -35,7 +35,11 @@
         <table class="table table-stripped table-hover">
         <thead>
             <tr>
-                <th>Amount - ({{currency}})</th>
+                {% if currency == "setup the currency" %}
+                        <th><a href="{% url 'preferences' %}">Amount  - ({{currency}})</a></th>
+                {% else %}
+                    <th>Amount - ({{currency}})</th>
+                {% endif %}
                 <th>Source</th>
                 <th>Description</th>
                 <th>Date</th>
@@ -62,7 +66,11 @@
             <table class="table table-stripped table-hover">
             <thead>
                 <tr>
-                    <th>Amount  -  ({{currency}})</th>
+                   {% if currency == "setup the currency" %}
+                        <th><a href="{% url 'preferences' %}">Amount  - ({{currency}})</a></th>
+                    {% else %}
+                        <th>Amount - ({{currency}})</th>
+                    {% endif %}
                     <th>Source</th>
                     <th>Description</th>
                     <th>Date</th>
@@ -91,6 +99,6 @@
     </div>
     </div>
 </div>
-<script src="{% static 'js/searchIncome .js' %}"></script>
+<script src="{% static 'js/searchIncome.js' %}"></script>
 {% endblock %}
 
