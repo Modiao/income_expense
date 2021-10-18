@@ -1077,7 +1077,7 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def index(re:\n    expenses = Expense.objects.filter(owner=request.user)\n    paginator = Paginator(expenses, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n        currency = currency.currency\n    except UserPreference.DoesNotExist:\n        currency = \"setup the currency\"",
+        "peekOfCode": "def index(request):\n    expenses = Expense.objects.filter(owner=request.user)\n    paginator = Paginator(expenses, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n        currency = currency.currency\n    except UserPreference.DoesNotExist:\n        currency = \"setup the currency\"",
         "detail": "expenses.views",
         "documentation": {}
     },

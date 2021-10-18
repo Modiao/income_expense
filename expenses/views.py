@@ -14,7 +14,7 @@ from .models import Category, Expense
 
 @login_required(login_url='/authentication/login')
 @permission_required('Can delete category')
-def index(re:
+def index(request):
     expenses = Expense.objects.filter(owner=request.user)
     paginator = Paginator(expenses, 4)
     page_number = request.GET.get('page')
