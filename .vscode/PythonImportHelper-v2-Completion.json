@@ -735,6 +735,14 @@
         "documentation": {}
     },
     {
+        "label": "permission_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
         "label": "login_required",
         "importPath": "django.contrib.auth.decorators",
         "description": "django.contrib.auth.decorators",
@@ -814,6 +822,32 @@
         "importPath": "django_heroku",
         "description": "django_heroku",
         "detail": "django_heroku",
+        "documentation": {}
+    },
+    {
+        "label": "sentry_sdk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sentry_sdk",
+        "description": "sentry_sdk",
+        "detail": "sentry_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoIntegration",
+        "importPath": "sentry_sdk.integrations.django",
+        "description": "sentry_sdk.integrations.django",
+        "isExtraImport": true,
+        "detail": "sentry_sdk.integrations.django",
+        "documentation": {}
+    },
+    {
+        "label": "debug_toolbar",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "debug_toolbar",
+        "description": "debug_toolbar",
+        "detail": "debug_toolbar",
         "documentation": {}
     },
     {
@@ -1043,7 +1077,7 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def index(request):\n    expenses = Expense.objects.filter(owner=request.user)\n    paginator = Paginator(expenses, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n        currency = currency.currency\n    except UserPreference.DoesNotExist:\n        currency = \"setup the currency\"",
+        "peekOfCode": "def index(re:\n    expenses = Expense.objects.filter(owner=request.user)\n    paginator = Paginator(expenses, 4)\n    page_number = request.GET.get('page')\n    page_obj = Paginator.get_page(paginator, page_number)\n    try:\n        currency = UserPreference.objects.get(user=request.user)\n        currency = currency.currency\n    except UserPreference.DoesNotExist:\n        currency = \"setup the currency\"",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -1115,7 +1149,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-)2@y7+v+8mfbww2-3%*yy2)@)g0*c2q7#*udsl$_wrh+_=@n_w'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nimport sentry_sdk\nfrom sentry_sdk.integrations.django import DjangoIntegration\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-)2@y7+v+8mfbww2-3%*yy2)@)g0*c2q7#*udsl$_wrh+_=@n_w'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1124,7 +1158,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-)2@y7+v+8mfbww2-3%*yy2)@)g0*c2q7#*udsl$_wrh+_=@n_w'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-)2@y7+v+8mfbww2-3%*yy2)@)g0*c2q7#*udsl$_wrh+_=@n_w'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\n# Application definition",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1133,7 +1167,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1142,7 +1176,16 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'expenses',",
+        "peekOfCode": "ALLOWED_HOSTS = []\nINTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "expenseswebsite.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INTERNAL_IPS",
+        "kind": 5,
+        "importPath": "expenseswebsite.settings",
+        "description": "expenseswebsite.settings",
+        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    '127.0.0.1',\n    # ...\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1151,7 +1194,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'expenses',\n    'authentication',\n    'userpreferences',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'debug_toolbar',\n    'expenses',\n    'authentication',",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1160,7 +1203,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'expenseswebsite.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'debug_toolbar.middleware.DebugToolbarMiddleware',\n]",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1304,7 +1347,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "MESSAGE_TAGS = {\n    messages.ERROR: \"danger\"\n}\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "peekOfCode": "MESSAGE_TAGS = {\n    messages.ERROR: \"danger\"\n}\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587\nsentry_sdk.init(",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1313,7 +1356,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587\nsentry_sdk.init(\n    dsn=\"https://e3697b60595c4feb876c989225c2cbd5@o402470.ingest.sentry.io/6012060\",\n    integrations=[DjangoIntegration()],\n    # Set traces_sample_rate to 1.0 to capture 100%",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1322,7 +1365,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587\nsentry_sdk.init(\n    dsn=\"https://e3697b60595c4feb876c989225c2cbd5@o402470.ingest.sentry.io/6012060\",\n    integrations=[DjangoIntegration()],\n    # Set traces_sample_rate to 1.0 to capture 100%\n    # of transactions for performance monitoring.",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1331,7 +1374,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com'\nEMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587\nsentry_sdk.init(\n    dsn=\"https://e3697b60595c4feb876c989225c2cbd5@o402470.ingest.sentry.io/6012060\",\n    integrations=[DjangoIntegration()],\n    # Set traces_sample_rate to 1.0 to capture 100%\n    # of transactions for performance monitoring.\n    # We recommend adjusting this value in production.",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1340,7 +1383,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "EMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "peekOfCode": "EMAIL_HOST_USER = config('EMAIL_HOST_USER')\nEMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587\nsentry_sdk.init(\n    dsn=\"https://e3697b60595c4feb876c989225c2cbd5@o402470.ingest.sentry.io/6012060\",\n    integrations=[DjangoIntegration()],\n    # Set traces_sample_rate to 1.0 to capture 100%\n    # of transactions for performance monitoring.\n    # We recommend adjusting this value in production.\n    traces_sample_rate=1.0,",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1349,7 +1392,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')\nEMAIL_PORT = 587\nsentry_sdk.init(\n    dsn=\"https://e3697b60595c4feb876c989225c2cbd5@o402470.ingest.sentry.io/6012060\",\n    integrations=[DjangoIntegration()],\n    # Set traces_sample_rate to 1.0 to capture 100%\n    # of transactions for performance monitoring.\n    # We recommend adjusting this value in production.\n    traces_sample_rate=1.0,\n    # If you wish to associate users to errors (assuming you are using",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1358,7 +1401,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.settings",
         "description": "expenseswebsite.settings",
-        "peekOfCode": "EMAIL_PORT = 587",
+        "peekOfCode": "EMAIL_PORT = 587\nsentry_sdk.init(\n    dsn=\"https://e3697b60595c4feb876c989225c2cbd5@o402470.ingest.sentry.io/6012060\",\n    integrations=[DjangoIntegration()],\n    # Set traces_sample_rate to 1.0 to capture 100%\n    # of transactions for performance monitoring.\n    # We recommend adjusting this value in production.\n    traces_sample_rate=1.0,\n    # If you wish to associate users to errors (assuming you are using\n    # django.contrib.auth) you may enable sending PII data.",
         "detail": "expenseswebsite.settings",
         "documentation": {}
     },
@@ -1367,7 +1410,7 @@
         "kind": 5,
         "importPath": "expenseswebsite.urls",
         "description": "expenseswebsite.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('expenses.urls')),\n    path('authentication/', include('authentication.urls')),\n    path('references/', include('userpreferences.urls')),\n    path('income/', include('userincome.urls')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('expenses.urls')),\n    path('authentication/', include('authentication.urls')),\n    path('references/', include('userpreferences.urls')),\n    path('income/', include('userincome.urls')),\n    path('__debug__/', include(debug_toolbar.urls)),\n]",
         "detail": "expenseswebsite.urls",
         "documentation": {}
     },

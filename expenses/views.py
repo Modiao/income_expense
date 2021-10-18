@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib import messages
 from django.core.paginator import Paginator
 import json
@@ -13,7 +13,8 @@ from .models import Category, Expense
 # Create your views here.
 
 @login_required(login_url='/authentication/login')
-def index(request):
+@permission_required('Can delete category')
+def index(re:
     expenses = Expense.objects.filter(owner=request.user)
     paginator = Paginator(expenses, 4)
     page_number = request.GET.get('page')
@@ -92,6 +93,7 @@ def edit_expense(request, id):
         expense.save()
         messages.info(request, 'Expense update successfully')
         return redirect('expenses')
+
 
 def delete_expense(request, id):
     expense = Expense.objects.get(pk=id)
