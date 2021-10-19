@@ -507,7 +507,23 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -767,6 +783,15 @@
         "documentation": {}
     },
     {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
         "label": "UserPreference",
         "importPath": "userpreferences.models",
         "description": "userpreferences.models",
@@ -864,14 +889,6 @@
         "description": "userincome.models",
         "isExtraImport": true,
         "detail": "userincome.models",
-        "documentation": {}
-    },
-    {
-        "label": "stats_expense_view",
-        "importPath": "expenses.views",
-        "description": "expenses.views",
-        "isExtraImport": true,
-        "detail": "expenses.views",
         "documentation": {}
     },
     {
@@ -1068,7 +1085,7 @@
         "kind": 5,
         "importPath": "expenses.urls",
         "description": "expenses.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses'),\n    path('edit-expense/<int:id>', views.edit_expense, name='edit-expenses'),\n    path('delete-expense/<int:id>', views.delete_expense, name='delete-expenses'),\n    path('search-expenses/', csrf_exempt(views.search_expense), name='search-expenses'),\n    path('expense_category_summary', views.expense_category_summary, name='expense_category_summary'),\n    path('stats_expense', views.stats_expense_view, name='stats_expense'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses'),\n    path('edit-expense/<int:id>', views.edit_expense, name='edit-expenses'),\n    path('delete-expense/<int:id>', views.delete_expense, name='delete-expenses'),\n    path('search-expenses/', csrf_exempt(views.search_expense), name='search-expenses'),\n    path('expense_category_summary', views.expense_category_summary, name='expense_category_summary'),\n    path('stats_expense', views.stats_expense_view, name='stats_expense'),\n    path('expense-export-csv', views.export_csv, name='expense-export-csv'),\n]",
         "detail": "expenses.urls",
         "documentation": {}
     },
@@ -1131,7 +1148,16 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def stats_expense_view(request):\n    if request.method == \"GET\":\n        return render(request, 'expenses/stats.html')",
+        "peekOfCode": "def stats_expense_view(request):\n    if request.method == \"GET\":\n        return render(request, 'expenses/stats.html')\ndef export_csv(request):\n    response  = HttpResponse(content_type='text/csv')\n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + \".csv\"\n    writer = csv.writer(response)\n    writer.writerow(['Amount', 'Description', 'Category', 'Date'])\n    expenses = Expense.objects.filter(owner=request.user)",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_csv",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def export_csv(request):\n    response  = HttpResponse(content_type='text/csv')\n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + \".csv\"\n    writer = csv.writer(response)\n    writer.writerow(['Amount', 'Description', 'Category', 'Date'])\n    expenses = Expense.objects.filter(owner=request.user)\n    for expense in expenses:\n        writer.writerow([expense.amount, expense.description,\\\n            expense.category, expense.date])",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -1464,7 +1490,7 @@
         "kind": 5,
         "importPath": "userincome.urls",
         "description": "userincome.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='incomes'),\n    path('add-income/', views.add_income, name='add-income'),\n    path('edit-income/<int:id>', views.edit_income, name='edit-income'),\n    path('delete-income/<int:id>', views.delete_income, name='delete-income'),\n    path('search-income/', csrf_exempt(views.search_income), name='search-income'),\n    path('income_source_summary/', views.income_source_summary, name='income_source_summary'),\n    path('stats_income', views.stats_income_view, name='stats_income'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='incomes'),\n    path('add-income/', views.add_income, name='add-income'),\n    path('edit-income/<int:id>', views.edit_income, name='edit-income'),\n    path('delete-income/<int:id>', views.delete_income, name='delete-income'),\n    path('search-income/', csrf_exempt(views.search_income), name='search-income'),\n    path('income_source_summary/', views.income_source_summary, name='income_source_summary'),\n    path('stats_income', views.stats_income_view, name='stats_income'),\n    path('income-export-csv', views.export_csv, name='income-export-csv'),\n]",
         "detail": "userincome.urls",
         "documentation": {}
     },
@@ -1527,7 +1553,16 @@
         "kind": 2,
         "importPath": "userincome.views",
         "description": "userincome.views",
-        "peekOfCode": "def stats_income_view(request):\n    if request.method == 'GET':\n        return render(request, 'userincome/stats.html')",
+        "peekOfCode": "def stats_income_view(request):\n    if request.method == 'GET':\n        return render(request, 'userincome/stats.html')\ndef export_csv(request):\n    response = HttpResponse(content_type='text/csv')\n    response['Content-Disposition'] = 'attachment; filename=Income_' + \\\n            str(datetime.datetime.now().strftime(\"%d-%m-%Y\")) + \".csv\"\n    writer = csv.writer(response)\n    writer.writerow(['Amount', 'Description', 'Source', 'Date'])\n    incomes = UserIncome.objects.filter(owner=request.user)",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_csv",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def export_csv(request):\n    response = HttpResponse(content_type='text/csv')\n    response['Content-Disposition'] = 'attachment; filename=Income_' + \\\n            str(datetime.datetime.now().strftime(\"%d-%m-%Y\")) + \".csv\"\n    writer = csv.writer(response)\n    writer.writerow(['Amount', 'Description', 'Source', 'Date'])\n    incomes = UserIncome.objects.filter(owner=request.user)\n    for income in incomes:\n        writer.writerow([income.amount, income.description, \\\n            income.source, income.date])",
         "detail": "userincome.views",
         "documentation": {}
     },
