@@ -6,6 +6,7 @@ import json
 from django.http import JsonResponse, HttpResponse
 import datetime
 import csv
+import xlwt
 
 from userpreferences.models import UserPreference
 from .models import Source, UserIncome
@@ -158,4 +159,34 @@ def export_csv(request):
         writer.writerow([income.amount, income.description, \
             income.source, income.date])
     
+    return response
+
+
+def export_excel(request):
+
+    response = HttpResponse(content_type='text/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename=expense_' + \
+        str(datetime.datetime.now()) + '.excel'
+
+    wb  = xlwt.Workbook(encoding='utf-8')
+    ws = wb.add_sheet('incomes')
+
+    row_num = 0
+    font_style = xlwt.XFStyle()
+    font_style.font.bold = True
+
+    colums = ['Amount', 'Description', 'Source', 'Date']
+
+    for colum in range(len(colums)):
+        ws.write(row_num, colum, colums[colum], font_style)
+
+    # Sheet body, remaining rows
+    font_style = xlwt.XFStyle()
+
+    rows = UserIncome.objects.filter(owner=request.user).values_list('amount', 'description', 'source', 'date' )
+    for row in rows:
+        row_num += 1
+        for col_num in range(len(row)):
+            ws.write(row_num, col_num, row[col_num], font_style)
+    wb.save(response)
     return response

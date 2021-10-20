@@ -171,11 +171,25 @@ def export_excel(request):
         str(datetime.datetime.now().strftime("%d/%m/%Y")) + '.xls'
 
     wb = xlwt.Workbook(encoding='utf-8')
-    wb = wb.add_sheet('Expenses')
+    ws = wb.add_sheet('Users')
     row_num = 0
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
 
     colums = ['Amount', 'Description', 'Category', 'Date']
 
-    pass
+    for colum in range(len(colums)):
+        ws.write(row_num, colum, colums[colum], font_style)
+
+    # Sheet body, remaining rows
+    font_style = xlwt.XFStyle()
+
+    rows = Expense.objects.filter(owner=request.user).values_list('amount', 'description', 'category', 'date' )
+    print("rows")
+    print(rows)
+    for row in rows:
+        row_num += 1
+        for col_num in range(len(row)):
+            ws.write(row_num, col_num, row[col_num], font_style)
+    wb.save(response)
+    return response

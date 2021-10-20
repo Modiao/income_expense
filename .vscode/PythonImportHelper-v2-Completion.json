@@ -1175,7 +1175,7 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def export_excel(request):\n    response = HttpResponse(content_type='application/ms-excel') \n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.xls'\n    wb = xlwt.Workbook(encoding='utf-8')\n    wb = wb.add_sheet('Expenses')\n    row_num = 0\n    font_style = xlwt.XFStyle()\n    font_style.font.bold = True\n    colums = ['Amount', 'Description', 'Category', 'Date']",
+        "peekOfCode": "def export_excel(request):\n    response = HttpResponse(content_type='application/ms-excel') \n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.xls'\n    wb = xlwt.Workbook(encoding='utf-8')\n    ws = wb.add_sheet('Users')\n    row_num = 0\n    font_style = xlwt.XFStyle()\n    font_style.font.bold = True\n    colums = ['Amount', 'Description', 'Category', 'Date']",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -1508,7 +1508,7 @@
         "kind": 5,
         "importPath": "userincome.urls",
         "description": "userincome.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='incomes'),\n    path('add-income/', views.add_income, name='add-income'),\n    path('edit-income/<int:id>', views.edit_income, name='edit-income'),\n    path('delete-income/<int:id>', views.delete_income, name='delete-income'),\n    path('search-income/', csrf_exempt(views.search_income), name='search-income'),\n    path('income_source_summary/', views.income_source_summary, name='income_source_summary'),\n    path('stats_income', views.stats_income_view, name='stats_income'),\n    path('income-export-csv', views.export_csv, name='income-export-csv'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='incomes'),\n    path('add-income/', views.add_income, name='add-income'),\n    path('edit-income/<int:id>', views.edit_income, name='edit-income'),\n    path('delete-income/<int:id>', views.delete_income, name='delete-income'),\n    path('search-income/', csrf_exempt(views.search_income), name='search-income'),\n    path('income_source_summary/', views.income_source_summary, name='income_source_summary'),\n    path('stats_income', views.stats_income_view, name='stats_income'),\n    path('income-export-csv', views.export_csv, name='income-export-csv'),\n    path('income-export-excel', views.export_excel, name='income-export-excel'),",
         "detail": "userincome.urls",
         "documentation": {}
     },
@@ -1581,6 +1581,15 @@
         "importPath": "userincome.views",
         "description": "userincome.views",
         "peekOfCode": "def export_csv(request):\n    response = HttpResponse(content_type='text/csv')\n    response['Content-Disposition'] = 'attachment; filename=Income_' + \\\n            str(datetime.datetime.now().strftime(\"%d-%m-%Y\")) + \".csv\"\n    writer = csv.writer(response)\n    writer.writerow(['Amount', 'Description', 'Source', 'Date'])\n    incomes = UserIncome.objects.filter(owner=request.user)\n    for income in incomes:\n        writer.writerow([income.amount, income.description, \\\n            income.source, income.date])",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_excel",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def export_excel(request):\n    response = HttpResponse(content_type='text/ms-excel')\n    response['Content-Disposition'] = 'attachment; filename=expense_' + \\\n        str(datetime.datetime.now()) + '.excel'\n    wb  = xlwt.Workbook(encoding='utf-8')\n    ws = wb.add_sheet('incomes')\n    row_num = 0\n    font_style = xlwt.XFStyle()\n    font_style.font.bold = True\n    colums = ['Amount', 'Description', 'Source', 'Date']",
         "detail": "userincome.views",
         "documentation": {}
     },
