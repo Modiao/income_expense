@@ -6,6 +6,7 @@ import json
 from django.http import JsonResponse, HttpResponse
 import datetime
 import csv
+import xlwt
 
 from userpreferences.models import UserPreference
 
@@ -162,3 +163,19 @@ def export_csv(request):
             expense.category, expense.date])
     
     return response
+
+
+def export_excel(request):
+    response = HttpResponse(content_type='application/ms-excel') 
+    response['Content-Disposition'] = 'attachment; filename=Expense_' + \
+        str(datetime.datetime.now().strftime("%d/%m/%Y")) + '.xls'
+
+    wb = xlwt.Workbook(encoding='utf-8')
+    wb = wb.add_sheet('Expenses')
+    row_num = 0
+    font_style = xlwt.XFStyle()
+    font_style.font.bold = True
+
+    colums = ['Amount', 'Description', 'Category', 'Date']
+
+    pass

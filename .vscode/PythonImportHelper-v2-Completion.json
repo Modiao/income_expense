@@ -792,6 +792,15 @@
         "documentation": {}
     },
     {
+        "label": "xlwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xlwt",
+        "description": "xlwt",
+        "detail": "xlwt",
+        "documentation": {}
+    },
+    {
         "label": "UserPreference",
         "importPath": "userpreferences.models",
         "description": "userpreferences.models",
@@ -1085,7 +1094,7 @@
         "kind": 5,
         "importPath": "expenses.urls",
         "description": "expenses.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses'),\n    path('edit-expense/<int:id>', views.edit_expense, name='edit-expenses'),\n    path('delete-expense/<int:id>', views.delete_expense, name='delete-expenses'),\n    path('search-expenses/', csrf_exempt(views.search_expense), name='search-expenses'),\n    path('expense_category_summary', views.expense_category_summary, name='expense_category_summary'),\n    path('stats_expense', views.stats_expense_view, name='stats_expense'),\n    path('expense-export-csv', views.export_csv, name='expense-export-csv'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='expenses'),\n    path('add-expense', views.add_expense, name='add-expenses'),\n    path('edit-expense/<int:id>', views.edit_expense, name='edit-expenses'),\n    path('delete-expense/<int:id>', views.delete_expense, name='delete-expenses'),\n    path('search-expenses/', csrf_exempt(views.search_expense), name='search-expenses'),\n    path('expense_category_summary', views.expense_category_summary, name='expense_category_summary'),\n    path('stats_expense', views.stats_expense_view, name='stats_expense'),\n    path('expense-export-csv', views.export_csv, name='expense-export-csv'),\n    path('expense-export-excel', views.export_excel, name='expense-export-excel'),",
         "detail": "expenses.urls",
         "documentation": {}
     },
@@ -1158,6 +1167,15 @@
         "importPath": "expenses.views",
         "description": "expenses.views",
         "peekOfCode": "def export_csv(request):\n    response  = HttpResponse(content_type='text/csv')\n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + \".csv\"\n    writer = csv.writer(response)\n    writer.writerow(['Amount', 'Description', 'Category', 'Date'])\n    expenses = Expense.objects.filter(owner=request.user)\n    for expense in expenses:\n        writer.writerow([expense.amount, expense.description,\\\n            expense.category, expense.date])",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_excel",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def export_excel(request):\n    response = HttpResponse(content_type='application/ms-excel') \n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.xls'\n    wb = xlwt.Workbook(encoding='utf-8')\n    wb = wb.add_sheet('Expenses')\n    row_num = 0\n    font_style = xlwt.XFStyle()\n    font_style.font.bold = True\n    colums = ['Amount', 'Description', 'Category', 'Date']",
         "detail": "expenses.views",
         "documentation": {}
     },
