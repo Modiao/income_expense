@@ -801,6 +801,63 @@
         "documentation": {}
     },
     {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "HTML",
+        "importPath": "weasyprint",
+        "description": "weasyprint",
+        "isExtraImport": true,
+        "detail": "weasyprint",
+        "documentation": {}
+    },
+    {
+        "label": "HTML",
+        "importPath": "weasyprint",
+        "description": "weasyprint",
+        "isExtraImport": true,
+        "detail": "weasyprint",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Sum",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
         "label": "UserPreference",
         "importPath": "userpreferences.models",
         "description": "userpreferences.models",
@@ -1176,6 +1233,15 @@
         "importPath": "expenses.views",
         "description": "expenses.views",
         "peekOfCode": "def export_excel(request):\n    response = HttpResponse(content_type='application/ms-excel') \n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.xls'\n    wb = xlwt.Workbook(encoding='utf-8')\n    ws = wb.add_sheet('Users')\n    row_num = 0\n    font_style = xlwt.XFStyle()\n    font_style.font.bold = True\n    colums = ['Amount', 'Description', 'Category', 'Date']",
+        "detail": "expenses.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_pdf",
+        "kind": 2,
+        "importPath": "expenses.views",
+        "description": "expenses.views",
+        "peekOfCode": "def export_pdf(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'inline; attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.pdf'\n    response['Content-Transfer-Encoding'] = 'binary'\n    expenses = Expense.objects.filter(owner=request.user)\n    sum = expenses.aggregate(Sum('amount'))\n    html_string  = render_to_string('expenses/pdf-output.html', \n                {'expenses': expenses, 'total': sum['amount__sum']})\n    html = HTML(string=html_string)",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -1590,6 +1656,15 @@
         "importPath": "userincome.views",
         "description": "userincome.views",
         "peekOfCode": "def export_excel(request):\n    response = HttpResponse(content_type='text/ms-excel')\n    response['Content-Disposition'] = 'attachment; filename=expense_' + \\\n        str(datetime.datetime.now()) + '.excel'\n    wb  = xlwt.Workbook(encoding='utf-8')\n    ws = wb.add_sheet('incomes')\n    row_num = 0\n    font_style = xlwt.XFStyle()\n    font_style.font.bold = True\n    colums = ['Amount', 'Description', 'Source', 'Date']",
+        "detail": "userincome.views",
+        "documentation": {}
+    },
+    {
+        "label": "export_pdf",
+        "kind": 2,
+        "importPath": "userincome.views",
+        "description": "userincome.views",
+        "peekOfCode": "def export_pdf(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'inline; attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.pdf'\n    response['Content-Transfer-Encoding'] = 'binary'\n    incomes = UserIncome.objects.filter(owner=request.user)\n    sum = incomes.aggregate(Sum('amount'))\n    html_string  = render_to_string('userincome/pdf-output.html', \n                {'incomes': incomes, 'total': sum['amount__sum']})\n    html = HTML(string=html_string)",
         "detail": "userincome.views",
         "documentation": {}
     },
