@@ -1241,7 +1241,7 @@
         "kind": 2,
         "importPath": "expenses.views",
         "description": "expenses.views",
-        "peekOfCode": "def export_pdf(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'inline; attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.pdf'\n    response['Content-Transfer-Encoding'] = 'binary'\n    expenses = Expense.objects.filter(owner=request.user)\n    sum = expenses.aggregate(Sum('amount'))\n    html_string  = render_to_string('expenses/pdf-output.html', \n                {'expenses': expenses, 'total': sum['amount__sum']})\n    html = HTML(string=html_string)",
+        "peekOfCode": "def export_pdf(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.pdf'\n    response['Content-Transfer-Encoding'] = 'binary'\n    expenses = Expense.objects.filter(owner=request.user)\n    sum = expenses.aggregate(Sum('amount'))\n    html_string  = render_to_string('expenses/pdf-output.html', \n                {'expenses': expenses, 'total': sum['amount__sum']})\n    html = HTML(string=html_string)",
         "detail": "expenses.views",
         "documentation": {}
     },
@@ -1664,7 +1664,7 @@
         "kind": 2,
         "importPath": "userincome.views",
         "description": "userincome.views",
-        "peekOfCode": "def export_pdf(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'inline; attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.pdf'\n    response['Content-Transfer-Encoding'] = 'binary'\n    incomes = UserIncome.objects.filter(owner=request.user)\n    sum = incomes.aggregate(Sum('amount'))\n    html_string  = render_to_string('userincome/pdf-output.html', \n                {'incomes': incomes, 'total': sum['amount__sum']})\n    html = HTML(string=html_string)",
+        "peekOfCode": "def export_pdf(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=Expense_' + \\\n        str(datetime.datetime.now().strftime(\"%d/%m/%Y\")) + '.pdf'\n    response['Content-Transfer-Encoding'] = 'binary'\n    incomes = UserIncome.objects.filter(owner=request.user)\n    sum = incomes.aggregate(Sum('amount'))\n    html_string  = render_to_string('userincome/pdf-output.html', \n                {'incomes': incomes, 'total': sum['amount__sum']})\n    html = HTML(string=html_string)",
         "detail": "userincome.views",
         "documentation": {}
     },

@@ -200,7 +200,7 @@ def export_excel(request):
 
 def export_pdf(request):
     response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'inline; attachment; filename=Expense_' + \
+    response['Content-Disposition'] = 'attachment; filename=Expense_' + \
         str(datetime.datetime.now().strftime("%d/%m/%Y")) + '.pdf'
     response['Content-Transfer-Encoding'] = 'binary'
 
